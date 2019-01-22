@@ -49,9 +49,7 @@ var Player = function(){
     this.y = 400;
     return this;
 };
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
+
 Player.prototype.update = function() {
      // moving player in the direction button is pressed
     if (this.ctrlKey === 'left' && this.x !== 0) {
