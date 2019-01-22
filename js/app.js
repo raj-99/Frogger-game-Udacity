@@ -11,7 +11,7 @@ var Enemy = function() {
     this.sprite = 'images/enemy-bug.png';
     this.x = 0;
     this.y = valueOfY[Math.floor(Math.random() * 3)];
-    this.speed = Math.floor(100 + (Math.random() * 200));
+    this.speed = Math.floor(Math.random() * 100);
 };
 
 // Update the enemy's position, required method for game
@@ -23,7 +23,7 @@ Enemy.prototype.update = function(dt) {
     this.x += this.speed * dt;
     
     if (this.x > 505) {
-        this.x = -101;
+        this.x = -201;
         this.y = this.y + 83;
         this.speed = Math.floor(100 + (Math.random() * 200));
 
@@ -110,7 +110,7 @@ var checkCollision = function(bug, you) {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-var totalEnemies = 4;
+var totalEnemies = 3;
 var allEnemies = [];
 
 for (var i = 0; i < totalEnemies; i++) {
